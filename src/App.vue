@@ -4,9 +4,8 @@
     <SectionHeader title="In Progress" icon="🚧"></SectionHeader>
     <SectionHeader title="Done" icon="✅"></SectionHeader>
     <SectionBody></SectionBody>
-    <ItemMinimal title="Make Home Page Responsive" id="1255"></ItemMinimal>
-    <RoundButton type="edit"></RoundButton>
-    <RoundButton type="add"></RoundButton>
+    <ItemMinimal title="Make Home Page Responsive" id="1255" priority="high"></ItemMinimal>
+    <SectionControl></SectionControl>
   </div>
 </template>
 
@@ -14,7 +13,7 @@
 import SectionHeader from "./components/SectionHeader";
 import SectionBody from "./components/SectionBody";
 import ItemMinimal from "./components/ItemMinimal";
-import RoundButton from "./components/RoundButton";
+import SectionControl from "./components/SectionControl";
 
 export default {
   name: 'App',
@@ -22,7 +21,7 @@ export default {
     SectionHeader,
     SectionBody,
     ItemMinimal,
-    RoundButton
+    SectionControl
   }
 }
 </script>

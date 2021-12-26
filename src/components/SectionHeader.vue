@@ -1,5 +1,5 @@
 <template>
-  <div class="sectionHeader_container">
+  <div class="container">
     {{ title }} {{ icon }}
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style scoped>
-.sectionHeader_container {
+.container {
   background-color: rgb(128, 128, 128);
   color: rgb(232, 232, 232);
   padding: 10px;

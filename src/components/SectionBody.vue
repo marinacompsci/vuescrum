@@ -1,6 +1,6 @@
 <template>
-  <div class="sectionBody_container">
-    <div class="sectionBody_content">
+  <div class="container">
+    <div class="content">
       ...
     </div>
   </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-.sectionBody_container {
+.container {
   background-color: rgb(128, 128, 128);
   border-radius: 15px;
   color: rgb(232, 232, 232);
@@ -23,7 +23,7 @@ export default {
   border-width: thin;
 }
 
-.sectionBody_content {
+.content {
 
 }
 </style>

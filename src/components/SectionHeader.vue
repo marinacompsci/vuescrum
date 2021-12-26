@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="custom-container">
     {{ title }} {{ icon }}
   </div>
 </template>
@@ -15,10 +15,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  background-color: rgb(128, 128, 128);
+.custom-container {
+  background-color: rgb(51, 51, 51);
   color: rgb(232, 232, 232);
-  padding: 10px;
+  padding: 10px 20px;
   font-weight: bold;
   border-radius: 15px;
   margin: 5px;

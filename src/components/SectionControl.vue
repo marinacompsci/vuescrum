@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="custom-container">
     <RoundButton type="add"></RoundButton>
     <RoundButton type="edit"></RoundButton>
   </div>
@@ -16,9 +16,11 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  background-color: rgba(128, 128, 128, 0.2);
+.custom-container {
+  background-color: rgba(244, 244, 244, 0.8);
   display: flex;
-  justify-content: center;
+  margin: 5px;
+  border-radius: 15px;
+  width: fit-content;
 }
 </style>

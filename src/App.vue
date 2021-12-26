@@ -1,27 +1,22 @@
 <template>
   <div id="app">
-    <SectionHeader title="Backlog" icon="📋"></SectionHeader>
-    <SectionHeader title="In Progress" icon="🚧"></SectionHeader>
-    <SectionHeader title="Done" icon="✅"></SectionHeader>
-    <SectionBody></SectionBody>
-    <ItemMinimal title="Make Home Page Responsive" id="1255" priority="high"></ItemMinimal>
-    <SectionControl></SectionControl>
+    <main>
+      <div class="main_content">
+        <Section title="Backlog" icon="📋"></Section>
+        <Section title="In Progress" icon="🚧"></Section>
+        <Section title="Done" icon="✅"></Section>
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import SectionHeader from "./components/SectionHeader";
-import SectionBody from "./components/SectionBody";
-import ItemMinimal from "./components/ItemMinimal";
-import SectionControl from "./components/SectionControl";
+import Section from "./components/Section";
 
 export default {
   name: 'App',
   components: {
-    SectionHeader,
-    SectionBody,
-    ItemMinimal,
-    SectionControl
+    Section
   }
 }
 </script>
@@ -34,5 +29,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.main_content {
+  display: flex;
+  justify-content: center;
+}
+body {
+  background-color: #7b7f85 !important;
 }
 </style>

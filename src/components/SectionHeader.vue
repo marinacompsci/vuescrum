@@ -18,9 +18,9 @@ export default {
 .sectionHeader_container {
   background-color: rgb(128, 128, 128);
   color: rgb(232, 232, 232);
-  border-radius: 15px;
   padding: 10px;
   font-weight: bold;
+  border-radius: 15px;
   margin: 5px;
 }
 </style>

@@ -4,18 +4,21 @@
     <SectionHeader title="In Progress" icon="🚧"></SectionHeader>
     <SectionHeader title="Done" icon="✅"></SectionHeader>
     <SectionBody></SectionBody>
+    <ItemMinimal title="Make Home Page Responsive" id="1255"></ItemMinimal>
   </div>
 </template>
 
 <script>
 import SectionHeader from "./components/SectionHeader";
 import SectionBody from "./components/SectionBody";
+import ItemMinimal from "./components/ItemMinimal";
 
 export default {
   name: 'App',
   components: {
     SectionHeader,
-    SectionBody
+    SectionBody,
+    ItemMinimal
   }
 }
 </script>

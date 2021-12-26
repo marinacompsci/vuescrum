@@ -1,13 +1,13 @@
 <template>
-  <div class="itemMinimal_container" :class="getPriorityColorClass">
-    <div class="itemMinimal_container__infos">
-      <div class="itemMinimal_title">{{ title }}</div>
+  <b-button block class="itemMinimal_container" :class="getPriorityColorClass">
       <div class="itemMinimal_container__infos">
-        <div><b-badge variant="dark">{{ modifyId() }}</b-badge></div>
-        <div><b-badge class="badge-custom" pill :variant="getPriorityColorClass">{{ priority.toUpperCase() }}</b-badge></div>
+        <div class="itemMinimal_title">{{ title }}</div>
+        <div class="itemMinimal_container__infos">
+          <div><b-badge variant="dark">{{ modifyId() }}</b-badge></div>
+          <div><b-badge class="badge-custom" pill :variant="getPriorityColorClass">{{ priority.toUpperCase() }}</b-badge></div>
+        </div>
       </div>
-    </div>
-  </div>
+  </b-button>
 </template>
 
 <script>
@@ -42,7 +42,6 @@ export default {
   border-radius: 15px;
   color: rgb(232, 232, 232);
   padding: 10px;
-  margin: 5px;
   text-align: left;
 }
 .itemMinimal_container__infos {

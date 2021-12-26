@@ -5,6 +5,8 @@
     <SectionHeader title="Done" icon="✅"></SectionHeader>
     <SectionBody></SectionBody>
     <ItemMinimal title="Make Home Page Responsive" id="1255"></ItemMinimal>
+    <RoundButton type="edit"></RoundButton>
+    <RoundButton type="add"></RoundButton>
   </div>
 </template>
 
@@ -12,13 +14,15 @@
 import SectionHeader from "./components/SectionHeader";
 import SectionBody from "./components/SectionBody";
 import ItemMinimal from "./components/ItemMinimal";
+import RoundButton from "./components/RoundButton";
 
 export default {
   name: 'App',
   components: {
     SectionHeader,
     SectionBody,
-    ItemMinimal
+    ItemMinimal,
+    RoundButton
   }
 }
 </script>

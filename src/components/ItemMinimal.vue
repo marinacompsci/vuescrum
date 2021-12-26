@@ -1,6 +1,6 @@
 <template>
   <div class="itemMinimal_container">
-    <h5>{{ title }}  <b-badge variant="dark">{{ modifyId }}</b-badge></h5>
+    <h5>{{ title }}  <b-badge variant="dark">{{ modifyId() }}</b-badge></h5>
   </div>
 </template>
 
@@ -9,9 +9,9 @@ export default {
   name: "ItemMinimal",
   props: {
     title: String,
-    id: Number
+    id: String
   },
-  computed: {
+  methods: {
     modifyId() {
       return '#' + this.id.toString();
     }

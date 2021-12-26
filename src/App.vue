@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SectionHeader title="Backlog" icon="📋"></SectionHeader>
+    <SectionHeader title="In Progress" icon="🚧"></SectionHeader>
+    <SectionHeader title="Done" icon="✅"></SectionHeader>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SectionHeader from "./components/SectionHeader";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SectionHeader
   }
 }
 </script>

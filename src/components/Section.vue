@@ -1,16 +1,10 @@
 <template>
   <b-row cols="1" cols-sm="1" class="custom-section">
-    <b-col>
-      <SectionHeader :title="title" :icon="icon"></SectionHeader>
-    </b-col>
-    <b-col>
-      <SectionBody></SectionBody>
-    </b-col>
+    <b-col><SectionHeader :title="title" :icon="icon"></SectionHeader></b-col>
+    <b-col><SectionBody></SectionBody></b-col>
     <b-col>
       <b-row align-h="center">
-        <b-col cols="content" sm="content">
-          <SectionControl></SectionControl>
-        </b-col>
+        <b-col cols="content" sm="content"><SectionControl></SectionControl></b-col>
       </b-row>
     </b-col>
   </b-row>

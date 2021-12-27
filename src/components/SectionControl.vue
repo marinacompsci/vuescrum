@@ -1,9 +1,8 @@
 <template>
   <div class="custom-container">
-      <RoundButton type="add"></RoundButton>
-      <RoundButton type="edit"></RoundButton>
+      <RoundButton bClass="danger" title="Edit"></RoundButton>
+      <RoundButton bClass="success" title="Add"></RoundButton>
   </div>
-
 </template>
 
 <script>

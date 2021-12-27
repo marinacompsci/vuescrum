@@ -1,17 +1,20 @@
 <template>
   <div class="custom-container">
-      <RoundButton bClass="danger" title="Edit"></RoundButton>
-      <RoundButton bClass="success" title="Add"></RoundButton>
+      <EditItemButton bClass="warning" title="Edit"></EditItemButton>
+      <AddItemButton bClass="success" title="Add"></AddItemButton>
   </div>
 </template>
 
 <script>
-import RoundButton from "./RoundButton";
+import AddItemButton from "./buttons/AddItemButton";
+import EditItemButton from "./buttons/EditItemButton";
+
 export default {
   name: "SectionControl",
   components: {
-    RoundButton
-  }
+    AddItemButton,
+    EditItemButton
+  },
 }
 </script>
 

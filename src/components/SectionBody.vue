@@ -28,7 +28,6 @@ export default {
   margin: 5px;
   border-style: dashed;
   border-width: thin;
-  min-width: 300px;
 }
 
 .content {

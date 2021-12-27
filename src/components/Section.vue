@@ -1,5 +1,5 @@
 <template>
-  <b-row cols="1" cols-sm="1">
+  <b-row cols="1" cols-sm="1" class="custom-section">
     <b-col>
       <SectionHeader :title="title" :icon="icon"></SectionHeader>
     </b-col>
@@ -36,5 +36,7 @@ export default {
 </script>
 
 <style scoped>
-
+.custom-section {
+  min-width: 300px;
+}
 </style>

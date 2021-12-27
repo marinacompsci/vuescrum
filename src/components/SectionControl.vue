@@ -1,8 +1,9 @@
 <template>
   <div class="custom-container">
-    <RoundButton type="add"></RoundButton>
-    <RoundButton type="edit"></RoundButton>
+      <RoundButton type="add"></RoundButton>
+      <RoundButton type="edit"></RoundButton>
   </div>
+
 </template>
 
 <script>
@@ -18,7 +19,6 @@ export default {
 <style scoped>
 .custom-container {
   background-color: rgba(244, 244, 244, 0.8);
-  display: flex;
   margin: 5px;
   border-radius: 15px;
   width: fit-content;

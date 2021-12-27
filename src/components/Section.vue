@@ -1,9 +1,19 @@
 <template>
-  <div class="section_flex">
-    <SectionHeader :title="title" :icon="icon"></SectionHeader>
-    <SectionBody></SectionBody>
-    <SectionControl></SectionControl>
-  </div>
+  <b-row cols="1" cols-sm="1">
+    <b-col>
+      <SectionHeader :title="title" :icon="icon"></SectionHeader>
+    </b-col>
+    <b-col>
+      <SectionBody></SectionBody>
+    </b-col>
+    <b-col>
+      <b-row align-h="center">
+        <b-col cols="content" sm="content">
+          <SectionControl></SectionControl>
+        </b-col>
+      </b-row>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
@@ -26,10 +36,5 @@ export default {
 </script>
 
 <style scoped>
-.section_flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 </style>

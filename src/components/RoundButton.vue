@@ -1,9 +1,7 @@
 <template>
-  <div>
     <b-button pill :variant="buttonTypeClass()">
       {{ buttonTitle() }}
     </b-button>
-  </div>
 </template>
 
 <script>
@@ -33,6 +31,6 @@ export default {
 
 <style scoped>
   button {
-    margin: 5px;
+    margin: 10px;
   }
 </style>

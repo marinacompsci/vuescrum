@@ -1,20 +1,30 @@
 <template>
   <div class="custom-container">
-      <EditItemButton bClass="warning" title="Edit"></EditItemButton>
-      <AddItemButton bClass="success" title="Add"></AddItemButton>
+      <RoundButton bClass="warning" type="edit"
+                   :sourceType="sourceType"
+                   v-on:edit-item="editItemAction"/>
+      <RoundButton bClass="success" type="add"
+                   :sourceType="sourceType"
+                   v-on:add-item="addItemAction"/>
   </div>
 </template>
 
 <script>
-import AddItemButton from "./buttons/AddItemButton";
-import EditItemButton from "./buttons/EditItemButton";
+import RoundButton from "./buttons/RoundButton";
+import addItem from "../actions/addItem";
 
 export default {
   name: "SectionControl",
   components: {
-    AddItemButton,
-    EditItemButton
+    RoundButton
   },
+  props: {
+    sourceType: String
+  },
+  methods: {
+    addItemAction: addItem,
+    editItemAction: addItem,
+  }
 }
 </script>
 

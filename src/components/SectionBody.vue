@@ -1,10 +1,10 @@
 <template>
   <div class="custom-container">
     <div class="content">
-      <SectionItem title="Refactor Backend" id="1255" priority="high"></SectionItem>
-      <SectionItem title="Make Home Page Responsive" id="5441" priority="medium"></SectionItem>
-      <SectionItem title="Update to VueJs 3" id="3055" priority="low"></SectionItem>
-      <SectionItem title="Write Acceptance Tests" id="8263" priority="high"></SectionItem>
+      <SectionItem title="Refactor Backend" id="1255" priority="high"/>
+      <SectionItem title="Make Home Page Responsive" id="5441" priority="medium"/>
+      <SectionItem title="Update to VueJs 3" id="3055" priority="low"/>
+      <SectionItem title="Write Acceptance Tests" id="8263" priority="high"/>
     </div>
   </div>
 </template>

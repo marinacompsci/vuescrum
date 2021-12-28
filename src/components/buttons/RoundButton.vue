@@ -1,20 +1,43 @@
 <template>
-    <b-button pill :variant="bClass" @click="action({title: 'Foo Title'})">
-      {{ title }}
+    <b-button pill
+              v-b-modal.modal-1
+              :variant="bClass"
+              @click="emitClickEvent()"
+    >{{ title }}
     </b-button>
 </template>
 
 <script>
-import addItem from "../../actions/addItem";
-
 export default {
   name: "RoundButton",
   props: {
-    title: String,
     bClass: String,
+    sourceType: String,
+    type: String
   },
   methods: {
-    action: addItem
+    emitClickEvent() {
+      switch(this.type) {
+        case "edit":
+          this.$emit('edit-item', {title: 'Edit From' + ' ' + this.sourceType});
+          break;
+        case "add":
+          this.$emit('add-item', {title: 'Add From' + ' ' + this.sourceType});
+      }
+    }
+  },
+  computed: {
+    title() {
+      switch(this.type) {
+        case "edit":
+          return "Edit";
+        case "add":
+          return "Add";
+        default:
+          return "";
+
+      }
+    }
   }
 }
 </script>

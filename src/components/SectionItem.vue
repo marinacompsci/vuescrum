@@ -13,7 +13,7 @@
 <script>
 
 export default {
-  name: "ItemMinimal",
+  name: "SectionItem",
   props: {
     title: String,
     id: String,

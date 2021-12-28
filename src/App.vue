@@ -2,10 +2,10 @@
   <div id="app">
     <main>
       <b-container fluid>
-        <b-row cols="1" cols-sm="1" cols-md="2" cols-lg="3" align-h="center">
-          <b-col><Section title="Backlog" icon="📋"></Section></b-col>
-          <b-col><Section title="In Progress" icon="🚧"></Section></b-col>
-          <b-col><Section title="Done" icon="✅"></Section></b-col>
+        <b-row cols="1" cols-sm="1" cols-md="2" cols-lg="3" align-h="center" no-gutters>
+          <b-col><Section title="Backlog" icon="📋" sourceType="backlog"></Section></b-col>
+          <b-col><Section title="In Progress" icon="🚧" sourceType="progress"></Section></b-col>
+          <b-col><Section title="Completed" icon="✅" sourceType="completed"></Section></b-col>
         </b-row>
       </b-container>
     </main>

@@ -1,10 +1,12 @@
 <template>
-  <b-row cols="1" cols-sm="1" class="custom-section">
-    <b-col><SectionHeader :title="title" :icon="icon"></SectionHeader></b-col>
-    <b-col><SectionBody></SectionBody></b-col>
+  <b-row cols="1"
+         cols-sm="1"
+         class="custom-section"
+  ><b-col><SectionHeader :title="title" :icon="icon"/></b-col>
+    <b-col><SectionBody/></b-col>
     <b-col>
       <b-row align-h="center">
-        <b-col cols="content" sm="content"><SectionControl></SectionControl></b-col>
+        <b-col cols="content" sm="content"><SectionControl :sourceType="sourceType"/></b-col>
       </b-row>
     </b-col>
   </b-row>
@@ -16,10 +18,11 @@ import SectionBody from "./SectionBody";
 import SectionControl from "./SectionControl";
 
 export default {
-  name: "BacklogSection",
+  name: "Section",
   props: {
     title: String,
-    icon: String
+    icon: String,
+    sourceType: String
   },
   components: {
     SectionHeader,

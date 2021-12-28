@@ -1,11 +1,15 @@
 <template>
   <div class="custom-container">
-      <RoundButton bClass="warning" type="edit"
+      <RoundButton bClass="warning"
+                   type="edit"
                    :sourceType="sourceType"
-                   v-on:edit-item="editItemAction"/>
-      <RoundButton bClass="success" type="add"
+                   v-on:edit-item="editItemAction"
+      />
+      <RoundButton bClass="success"
+                   type="add"
                    :sourceType="sourceType"
-                   v-on:add-item="addItemAction"/>
+                   v-on:add-item="addItemAction"
+      />
   </div>
 </template>
 

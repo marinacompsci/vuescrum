@@ -2,7 +2,8 @@
   <b-row cols="1"
          cols-sm="1"
          class="custom-section"
-  ><b-col><SectionHeader :title="title" :icon="icon"/></b-col>
+  >
+    <b-col><SectionHeader :title="title" :icon="icon"/></b-col>
     <b-col><SectionBody/></b-col>
     <b-col>
       <b-row align-h="center">

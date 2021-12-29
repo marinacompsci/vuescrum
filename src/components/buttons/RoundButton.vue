@@ -4,7 +4,16 @@
               :variant="bClass"
               @click="emitClickEvent"
     >{{ title }}</b-button>
-    <ItemModal :modalShow="modalShow" :source-type="sourceType" :type="type" />
+    <b-modal v-model="modalShow"
+             :title="title"
+             ok-only
+             ok-title="Save"
+             ok-variant="success"
+    ><ItemModal
+        :source-type="sourceType"
+        :type="type"/>
+    </b-modal>
+
   </span>
 </template>
 

@@ -1,11 +1,5 @@
 <template>
-  <b-modal v-model="modalShow"
-           :title="title"
-           ok-only
-           ok-title="Save"
-           ok-variant="success"
-  ><h6>New Item</h6>
-  </b-modal>
+  <h6>New Item</h6>
 </template>
 
 <script>

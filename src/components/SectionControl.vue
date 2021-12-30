@@ -8,7 +8,7 @@
       <RoundButton bClass="success"
                    type="add"
                    :sourceType="sourceType"
-                   v-on:add-item="addItemAction"
+                   v-on:add-item="addBacklogItem"
       />
   </div>
 </template>
@@ -26,8 +26,11 @@ export default {
     sourceType: String
   },
   methods: {
-    addItemAction: addItem,
+    //addItemAction: addItem,
     editItemAction: addItem,
+    addBacklogItem(data) {
+        this.$store.commit('addBacklogItem', data);
+    }
   }
 }
 </script>

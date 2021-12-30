@@ -19,8 +19,7 @@ export default {
   name: 'App',
   components: {
     Section
-  },
-
+  }
 }
 </script>
 

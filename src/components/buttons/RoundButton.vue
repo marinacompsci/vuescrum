@@ -1,19 +1,17 @@
 <template>
   <span>
     <b-button pill
-              :variant="bClass"
-              @click="emitClickEvent"
-    >{{ title }}</b-button>
-    <b-modal v-model="modalShow"
-             :title="title"
-             ok-only
-             ok-title="Save"
-             ok-variant="success"
-    ><ItemModal
+        :variant="bClass"
+        @click="showModal"
+    >{{ buttonTitle }}</b-button>
+    <ItemModal
         :source-type="sourceType"
-        :type="type"/>
-    </b-modal>
-
+        :type="type"
+        :modalShow="modalIsShown"
+        :modalTitle="modalTitle"
+        v-on:add-item-modal="addItem"
+        v-on:edit-item-modal="editItem"
+    />
   </span>
 </template>
 
@@ -25,7 +23,7 @@ export default {
   props: {
     bClass: String,
     sourceType: String,
-    type: String
+    type: String,
   },
   components: {
     ItemModal
@@ -36,20 +34,18 @@ export default {
     }
   },
   methods: {
-    emitClickEvent() {
+    addItem(data) {
+      this.$emit('add-item', data);
+    },
+    editItem(data) {
+      this.$emit('edit-item', data);
+    },
+    showModal() {
       this.modalShow = !this.modalShow;
-      switch(this.type) {
-        case "edit":
-          this.$emit('edit-item', {title: 'Edit From' + ' ' + this.sourceType});
-          break;
-        case "add":
-          this.$emit('add-item', {title: 'Add From' + ' ' + this.sourceType});
-          break;
-      }
-    }
+    },
   },
   computed: {
-    title() {
+    buttonTitle() {
       switch(this.type) {
         case "edit":
           return "Edit";
@@ -59,6 +55,12 @@ export default {
           return "";
       }
     },
+    modalTitle() {
+      return this.buttonTitle + ' ' + 'Item';
+    },
+    modalIsShown() {
+      return this.modalShow
+    }
   },
 }
 </script>

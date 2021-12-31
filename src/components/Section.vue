@@ -4,7 +4,7 @@
          class="custom-section"
   >
     <b-col><SectionHeader :title="title" :icon="icon"/></b-col>
-    <b-col><SectionBody/></b-col>
+    <b-col><SectionBody :sourceType="sourceType"/></b-col>
     <b-col>
       <b-row align-h="center">
         <b-col cols="content" sm="content"><SectionControl :sourceType="sourceType"/></b-col>

@@ -18,11 +18,19 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    backlogItems: []
+    backlog: [],
+    progress: [],
+    completed: [],
   },
   mutations: {
     addBacklogItem(state, data) {
-      state.backlogItems.push(data);
+      state.backlog.push(data);
+    },
+    addProgressItem(state, data) {
+      state.progress.push(data);
+    },
+    addCompletedItem(state, data) {
+      state.completed.push(data);
     }
   }
 });

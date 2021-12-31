@@ -87,9 +87,9 @@ export default {
       tag: null,
       priorityOptions: [
         { value: null, text: 'Please select an item' },
-        { value: 'high', text: 'High' },
-        { value: 'medium', text: 'Medium' },
         { value: 'low', text: 'Low' },
+        { value: 'medium', text: 'Medium' },
+        { value: 'high', text: 'High' },
       ],
       workloadOptions: [
         { value: null, text: 'Please select an item' },

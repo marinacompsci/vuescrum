@@ -3,19 +3,18 @@
       <RoundButton bClass="warning"
                    type="edit"
                    :sourceType="sourceType"
-                   v-on:edit-item="editItemAction"
+                   v-on:edit-item="addItem"
       />
       <RoundButton bClass="success"
                    type="add"
                    :sourceType="sourceType"
-                   v-on:add-item="addBacklogItem"
+                   v-on:add-item="addItem"
       />
   </div>
 </template>
 
 <script>
 import RoundButton from "./buttons/RoundButton";
-import addItem from "../actions/addItem";
 
 export default {
   name: "SectionControl",
@@ -26,11 +25,12 @@ export default {
     sourceType: String
   },
   methods: {
-    //addItemAction: addItem,
-    editItemAction: addItem,
-    addBacklogItem(data) {
-        this.$store.commit('addBacklogItem', data);
-    }
+    addItem(data) {
+      if (this.sourceType === 'backlog') this.$store.commit('addBacklogItem', data);
+      else if (this.sourceType === 'progress') this.$store.commit('addProgressItem', data);
+      else if (this.sourceType === 'completed') this.$store.commit('addCompletedItem', data);
+    },
+    //editItemAction: addItem,
   }
 }
 </script>

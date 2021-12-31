@@ -1,10 +1,11 @@
 <template>
   <div class="custom-container">
     <div class="content">
-      <SectionItem title="Refactor Backend" id="1255" priority="high"/>
-      <SectionItem title="Make Home Page Responsive" id="5441" priority="medium"/>
-      <SectionItem title="Update to VueJs 3" id="3055" priority="low"/>
-      <SectionItem title="Write Acceptance Tests" id="8263" priority="high"/>
+      <SectionItem v-for="(item, idx) in items"
+                   :title="item.title"
+                   :id="Math.random() * 1000"
+                   :priority="item.priority"
+                   :key="idx"/>
     </div>
   </div>
 </template>
@@ -15,6 +16,18 @@ export default {
   name: "SectionBody",
   components: {
     SectionItem
+  },
+  props: {
+    sourceType: String
+  },
+  computed: {
+    items() {
+      console.log('sourceType: ' + this.sourceType);
+      if (this.sourceType === 'backlog') return this.$store.state.backlog;
+      else if (this.sourceType === 'progress') return this.$store.state.progress;
+      else if (this.sourceType === 'completed') return this.$store.state.completed;
+      else return [{title: 'Empty'}];
+    }
   }
 }
 </script>

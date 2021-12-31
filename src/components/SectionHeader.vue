@@ -1,6 +1,7 @@
 <template>
-  <div class="custom-container">
-    {{ title }} {{ icon }}
+  <div
+      class="custom-container"
+  >{{ `${title} ${icon}` }}
   </div>
 </template>
 
